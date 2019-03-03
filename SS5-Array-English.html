@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VHTM</title>
+</head>
+<input id="txtFind" type="text" >
+<button id="btnFind" onclick="SearchText()">Search</button>
+<body>
+<script>
+    let English=["banana","Lemon","Apple"];
+    let VietNam=["chuối","tranh","táo"];
+    let isExist= false;
+    let index = -1;
+  function SearchText(){
+      isExist = false;
+      let x = document.getElementById("txtFind").value;
+      console.log(x);
+      for (let i = 0; i < English.length; i++) {
+          if (x === English[i]) {
+              isExist=true;
+              index=i;
+              break;
+          }
+      }
+      if(isExist===true){
+          alert(VietNam[index])
+      } else {alert("Không tìm thấy từ nào")}
+    }
+</script>
+</body>
+</html>
